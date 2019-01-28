@@ -1,0 +1,7 @@
+{
+  "name": "HSM API",
+  "version": "0.1.0",
+  "description": "API Specification for HSM module",
+  "title": "HSM API",
+  "url" : "http://localhost:8090"
+}
