@@ -149,7 +149,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -d '{\"tx\" : \"f8486c843b9aca008347e7c4943dc33fc3fe1dcfe55cbe33c7456c6f00b5ca084780a416a0368d09ded19fbaec56f35458b1558c8f7db4158948ff82fe3c2dff13f277e38dd9c81c8080\", \"key\": \"a332e12403944ff84aaac0a7393790a3a60e3372c4031352ffb45ee7555df339\"}' -H \"Content-Type: application/json\" -X POST http://localhost:8090/api/sign",
+        "content": "curl -d '{\"rawTx\" : \"f8486c843b9aca008347e7c4943dc33fc3fe1dcfe55cbe33c7456c6f00b5ca084780a416a0368d09ded19fbaec56f35458b1558c8f7db4158948ff82fe3c2dff13f277e38dd9c81c8080\", \"account\": \"backed_addr\"}' -H \"Content-Type: application/json\" -X POST http://localhost:8090/api/sign",
         "type": "curl"
       }
     ],
@@ -160,15 +160,15 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "tx",
+            "field": "rawTx",
             "description": "<p>The raw transaction string</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "key",
-            "description": "<p>The AES encrypted private key</p>"
+            "field": "account",
+            "description": "<p>An alias for the account that should sign for the transaction</p>"
           }
         ]
       }

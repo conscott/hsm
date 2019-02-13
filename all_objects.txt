@@ -56,3 +56,57 @@ Private Key Object; EC
   label:      666
   ID:         6606
   Usage:      decrypt, sign, unwrap, derive
+Private Key Object; EC
+  label:      7707
+  ID:         7707
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441042f82dd90fd7cfa43351c25ce1a9e1e1eac9cc0480505975ba267542cf7fd6561b4357453feb274d89b7c586db98be0574b8561f62b91b1ee46225af3625c9c7f
+  EC_PARAMS:  06052b8104000a
+  label:      owner
+  ID:         1111
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      owner
+  ID:         1111
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104474678547225f585ec16e8627ed4b1807ad044ff3155c536cb41679ae2e1031bfadf026cb67ff19ca5568f3ddeb0984442386f8b173c0078f42f3bb1d79bebe8
+  EC_PARAMS:  06052b8104000a
+  label:      backed
+  ID:         2222
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      backed
+  ID:         2222
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104e8f3493e58764c125f3250da0565e3b822e4335b676d4f0fa3fda6eeb2698a85864bb9f5b6ee23418d3587c565faa25595f9e4ee40885f08ffdf32b6f4ffed43
+  EC_PARAMS:  06052b8104000a
+  label:      fee
+  ID:         4444
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      fee
+  ID:         4444
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441047765747eb4309ce38ab257b39a70e1cb3692446497c2bbe67352ed5881a466b236e22595e0581fcf276be3e35a7a303c5489ca07d4e97b5cd458b86dd4d95e58
+  EC_PARAMS:  06052b8104000a
+  label:      redeem
+  ID:         5555
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      redeem
+  ID:         5555
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104e4f761fe0d48e0fb7664c45d99cb719d71b9d02376cc4d9b5560ddd0cd5b6ecd72d1c1e66ce47ef6a6b8355289a7f14c1348292bfbd5577a7e7668cf1c1daa02
+  EC_PARAMS:  06052b8104000a
+  label:      unbacked
+  ID:         3333
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      unbacked
+  ID:         3333
+  Usage:      decrypt, sign, unwrap, derive
