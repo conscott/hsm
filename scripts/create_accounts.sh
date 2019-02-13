@@ -9,3 +9,4 @@ pkcs11-tool --module $MODULE -l -p $PIN --keypairgen --key-type EC:secp256k1 --i
 pkcs11-tool --module $MODULE -l -p $PIN --keypairgen --key-type EC:secp256k1 --id=3333 --label unbacked
 pkcs11-tool --module $MODULE -l -p $PIN --keypairgen --key-type EC:secp256k1 --id=4444 --label fee
 pkcs11-tool --module $MODULE -l -p $PIN --keypairgen --key-type EC:secp256k1 --id=5555 --label redeem
+pkcs11-tool --module $MODULE -l -p $PIN --keypairgen --key-type EC:secp256k1 --id=6666 --label oracle
