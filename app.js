@@ -111,6 +111,34 @@ app.post('/api/sign', async(req, res) => {
     return res.json({'signedTx': signedTx});
 });
 
+
+/**
+ * @api {get} /api/accounts Get HSM Accounts
+ * @apiGroup Public
+ * @apiName ListAccounts
+ * @apiDescription List the accounts of the HSM
+ *
+ * @apiExample {curl} Example usage:
+ *      curl http://localhost:8090/api/accounts
+ *
+ * @apiSuccess {String} accounts A list of HSM accounts by label
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "accounts": {
+ *          "backed" : {
+ *              "id": 1111,
+ *              "pubkey": "474678547225f585ec16e8627ed4b1807ad044ff3155c536cb41679ae2e1031bfadf026cb67ff19ca5568f3ddeb0984442386f8b173c0078f42f3bb1d79bebe8",
+ *              "addr": "0xa779990c4d6761f923ff857b5973c6baf9b868d8"
+ *          }
+ *     }
+ */
+app.get('/api/accounts', async(req, res) => {
+    return res.json({'accounts': labelMap});
+});
+
+
 /**
  * @api {get} /api/encrypt?data=dataToEncrypt Encrypt Data
  * @apiGroup Public

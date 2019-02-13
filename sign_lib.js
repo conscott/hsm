@@ -14,8 +14,8 @@ exports.sign = async(unsigned, account) => {
     let transaction = new tx(unrolled);
     let msgHash = transaction.hash(false).toString('hex');
 
-    let labelid = labelMap[account][0];
-    let expected_pubkey = labelMap[account][1];
+    let labelid = labelMap[account].id;
+    let expected_pubkey = labelMap[account].pubkey;
 
     cmd = './sign.sh ' + msgHash + " " + labelid
     //console.log("Executing " + cmd);
