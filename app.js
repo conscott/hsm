@@ -6,6 +6,8 @@ const tx = require('ethereumjs-tx');
 const express = require('express');
 const morgan = require('morgan');
 const rlp = require('rlp');
+const BigNumber = require('bignumber.js');
+const secp256k1 = require('secp256k1');
 
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec)
@@ -105,21 +107,33 @@ app.post('/api/sign', async(req, res) => {
     }
     let unrolled = rlp.decode(unsigned_tx);
     let transaction = new tx(unrolled);
-    console.log('transaction ' + transaction.toJSON());
+    //console.log('transaction ' + JSON.stringify(transaction.toJSON(), null, 4));
 
-    let hsm = false;
+    // sample
+    let sample = rlp.decode("0xf8886c843b9aca008347e7c4943dc33fc3fe1dcfe55cbe33c7456c6f00b5ca084780a416a0368d09ded19fbaec56f35458b1558c8f7db4158948ff82fe3c2dff13f277e38dd9c81ba070fe71539541a941b4d2a06441e4f62547f2fcd6592918db3e1a3593e37bc200a0434232f174218f35fd99ce37427b61fc2f740b25a66bf5ac70637876986b2d83");
+    console.log("Reference is " + JSON.stringify((new tx(sample)).toJSON(), null, 4));
+
+    let hsm = true;
     if (hsm) {
         // Get r,s value for signature
         const { stdout, stderr } = await exec('./sign.sh ' + unsigned_tx);
         logger.debug("Result is " + stdout);
         let sig = JSON.parse(stdout);
-        transaction.r = '0x' + sig.r;
-        transaction.s = '0x' + sig.s;
-        transaction.v = toHex(27);
+
+        // Gotta normalize the signaure with 
+        //transaction.r = '0x' + sig.r;
+        //transaction.s = '0x' + sig.s;
+        let r = 'cc116db15a6ac76556126f2eb7180eb844fa6dee784d8023452a81d78711774b';
+        let s = 'ee94cdfd79af567eca901a8475f54d904cda2b5a15eb2819e53d53ef13a17f01';
+        let sig = Buffer.concat([new Buffer(r, 'hex'), new Buffer(s, 'hex')])
+        let sig_normalize = secp256k1.signatureNormalize(sig)
+        transaction.r = sig_normalize.slice(0, 32);
+        transaction.s = sig_normalize.slice(32, 64);
+        transaction.v =  27;
         console.log("Verified is ... " + transaction.verifySignature());
-        transaction.v = toHex(28);
+        transaction.v =  28;
         console.log("Verified is ... " + transaction.verifySignature());
-        console.log('transaction ' + transaction.toJSON());
+        console.log('Transaction ' + JSON.stringify(transaction.toJSON(), null, 4));
     } else {
         // Now decrypt the private key and sign the rawtx
         let privateKey = decryptHex(encrypted_key);

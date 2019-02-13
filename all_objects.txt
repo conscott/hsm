@@ -1,0 +1,58 @@
+Public Key Object; RSA 2048 bits
+  label:      45d1b293fd611628
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      1234
+  ID:         1234
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441048f689f91369c1c2d01a9611d24d4f80fa6e580794fc3c42e3e239765ba0f19dfa290e083a7858d3d75745278e11d1a8a674c37d0e80a5c65054e3a47a2fbe0a5
+  EC_PARAMS:  06052b8104000a
+  label:      conor_test_key
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      01
+  ID:         01
+  Usage:      decrypt, sign, unwrap, derive
+Private Key Object; EC
+  label:      conor_test_key
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; RSA 1024 bits
+  label:      eb54703a30dbc2ac
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      test_key_1
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   04410469a6813038fdeeddce040167dcfeef55cf69d64e1a678d46adf7c0f7636f01812362587881a16a3d1eba852b73234c3704619f654c0e6ae57465809bc1ea787a
+  EC_PARAMS:  06082a8648ce3d030107
+  label:      test_key_1
+  Usage:      encrypt, verify, wrap
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104bca522d1c37fc018dbc8576c43f694d5903ab344f3061ad4713bb059aa976f51193f07535b2624ebc155e239fe8a55d89ab2080952b929cf4a332c88afa9530a
+  EC_PARAMS:  06082a8648ce3d030107
+  label:      1234
+  ID:         1234
+  Usage:      encrypt, verify, wrap
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441046a52ea3a3c71772a6a0a3fcefc825eac1093972051d75c4701a2a2867bf667c043e1d3f5119cd4b1a4508cd87647f7ac2d57e5ba8265ad6f16b731992b6fe743
+  EC_PARAMS:  06052b8104000a
+  label:      01
+  ID:         01
+  Usage:      encrypt, verify, wrap
+Private Key Object; RSA 
+  label:      eb54703a30dbc2ac
+  Usage:      decrypt, sign, unwrap
+Private Key Object; RSA 
+  label:      45d1b293fd611628
+  Usage:      decrypt, sign, unwrap
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441043eb0cb19e56366eb5bd9315a449ddb94cf51e463ade8db5b8060fea87e14afe15a0a92bb6659e78a9e9fd2dc165e38fd896dec577486a0114d4377a54d4a0777
+  EC_PARAMS:  06052b8104000a
+  label:      666
+  ID:         6606
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      666
+  ID:         6606
+  Usage:      decrypt, sign, unwrap, derive

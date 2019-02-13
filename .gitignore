@@ -1,5 +1,6 @@
 node_modules
 coverage
 coverage.json
-callback.txt
+unsigned.raw
+data.sig
 *.log
