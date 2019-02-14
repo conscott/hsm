@@ -110,3 +110,17 @@ Private Key Object; EC
   label:      unbacked
   ID:         3333
   Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104e6453d641816bc186761d87f8f588d05a80eb2e3a286079d47a7dd5e37eb7f69304c408d80f2a4ffba1453c245f84eecda1c9244804538c56ecb3e36f5538a26
+  EC_PARAMS:  06052b8104000a
+  label:      oracle
+  ID:         6666
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      oracle
+  ID:         6666
+  Usage:      decrypt, sign, unwrap, derive
+Private Key Object; EC
+  label:      btc
+  ID:         9999
+  Usage:      decrypt, sign, unwrap, derive
