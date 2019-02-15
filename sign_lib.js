@@ -40,3 +40,19 @@ exports.sign = async(unsigned, account) => {
     }
     return transaction.serialize().toString('hex')
 }
+
+exports.signbtc = async(unsigned, account) => {
+    // TODO
+}
+
+exports.signMsg = async(msgHash, id) => {
+    cmd = './sign.sh ' + msgHash + " " + id;
+    //console.log("Executing " + cmd);
+    const { stdout, stderr } = await exec(cmd);
+    let sig = JSON.parse(stdout);
+    let r = sig.r;
+    let s = sig.s;
+    sig = Buffer.concat([new Buffer(r, 'hex'), new Buffer(s, 'hex')])
+    let sig_normalize = secp256k1.signatureNormalize(sig)
+    return sig_normalize;
+}
