@@ -5,7 +5,6 @@ const dotenv = require('dotenv');
 const tx = require('ethereumjs-tx');
 const express = require('express');
 const morgan = require('morgan');
-
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec)
 

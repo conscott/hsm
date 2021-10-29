@@ -21,6 +21,10 @@ Public Key Object; EC  EC_POINT 256 bits
   label:      unbacked
   ID:         3333
   Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      gramchain
+  ID:         8888
+  Usage:      decrypt, sign, unwrap, derive
 Public Key Object; EC  EC_POINT 256 bits
   EC_POINT:   0441047765747eb4309ce38ab257b39a70e1cb3692446497c2bbe67352ed5881a466b236e22595e0581fcf276be3e35a7a303c5489ca07d4e97b5cd458b86dd4d95e58
   EC_PARAMS:  06052b8104000a
@@ -81,6 +85,12 @@ Public Key Object; EC  EC_POINT 256 bits
   ID:         1111
   Usage:      encrypt, verify, wrap
 Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   04410427d35ac43448771f6e56a443e8233e979e49dfb9f92a35393c2ca1c44fdc3d3ae85a815588d3850079c4a3e58efe7d85e366fb28d0e5cf1cb0e8ea3489590ca9
+  EC_PARAMS:  06052b8104000a
+  label:      gramchain
+  ID:         8888
+  Usage:      encrypt, verify, wrap
+Public Key Object; EC  EC_POINT 256 bits
   EC_POINT:   044104474678547225f585ec16e8627ed4b1807ad044ff3155c536cb41679ae2e1031bfadf026cb67ff19ca5568f3ddeb0984442386f8b173c0078f42f3bb1d79bebe8
   EC_PARAMS:  06052b8104000a
   label:      backed
@@ -125,12 +135,40 @@ Public Key Object; EC  EC_POINT 256 bits
   ID:         6666
   Usage:      encrypt, verify, wrap
 Public Key Object; EC  EC_POINT 256 bits
-  EC_POINT:   04410427d35ac43448771f6e56a443e8233e979e49dfb9f92a35393c2ca1c44fdc3d3ae85a815588d3850079c4a3e58efe7d85e366fb28d0e5cf1cb0e8ea3489590ca9
+  EC_POINT:   04410495e38d592b16de33667e195482f42688bd69b2fb63e128789c0aff628a53ca2543e6b033a8336895955b502bb049ec629ce57c36604ffe6a2c2a7a99b8d2ca50
   EC_PARAMS:  06052b8104000a
-  label:      gramchain
-  ID:         8888
+  label:      my_label
+  ID:         36393639
   Usage:      encrypt, verify, wrap
 Private Key Object; EC
-  label:      gramchain
-  ID:         8888
+  label:      my_label
+  ID:         36393639
   Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104b762d00ec3cc13b4e8f70866dff44360808321e0f49265a4f98bca628fb69a522fae99d88aae58842aedb77b52fd4440f9a848dd7835804797d7289975e31d0b
+  EC_PARAMS:  06052b8104000a
+  label:      my_label_1
+  ID:         37303030
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      my_label_1
+  ID:         37303030
+  Usage:      decrypt, sign, unwrap, derive
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   0441043ec15dd32767d3d11066911d99b1c2656719245d8ee0db909305341157d496207f652f701d73ef9e6d3a10afda2dbb85fba8a73bbfd3843713b4f556eea91c82
+  EC_PARAMS:  06052b8104000a
+  label:      my_label_2
+  ID:         6d795f6c6162656c5f32
+  Usage:      encrypt, verify, wrap
+Private Key Object; EC
+  label:      my_label_2
+  ID:         6d795f6c6162656c5f32
+  Usage:      decrypt, sign, unwrap, derive
+Secret Key Object; unknown key algorithm 31
+  label:      label
+  ID:         6d795f616573
+  Usage:      encrypt, decrypt, verify, wrap, unwrap
+Secret Key Object; unknown key algorithm 31
+  label:      my_aes
+  ID:         6d795f616573
+  Usage:      encrypt, decrypt, verify, wrap, unwrap
