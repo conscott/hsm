@@ -1,0 +1,8 @@
+Difficulties
+
+HSMs know about pubkeys, not addresses / address checksum
+
+One pubkey can make many different address types
+
+
+Give it raw msg, it spits back r/s value, which may not be how you want
